@@ -59,6 +59,7 @@ if result < 0:
 else:
     print('Выручка:', result)
     ROI = gain / result
+    print(f'{ROI * 100}%')
     staff_number = int(input('Введите численность персонала:'))
     print('Выручка на одного сотрудника:', result / staff_number)
 
