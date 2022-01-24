@@ -36,14 +36,16 @@ print(number)
 def max_digit(x):
     i = 0
     max = 0
+    max_current = 0
     while i < len(x)-1:
         if int(x[i]) <= int(x[i+1]):
-            max = int(x[i+1])
+            max_current = int(x[i+1])
         elif int(x[i]) > int(x[i+1]):
-            max = int(x)
+            max_current = int(x[i])
+        if max_current >= max:
+            max = max_current
         i += 1
     return max
-
 
 x = input('Введите целое положительное число: ')
 print(max_digit(x))
@@ -57,6 +59,7 @@ if result < 0:
 else:
     print('Выручка:', result)
     ROI = gain / result
+    print(f'{ROI * 100}%')
     staff_number = int(input('Введите численность персонала:'))
     print('Выручка на одного сотрудника:', result / staff_number)
 
