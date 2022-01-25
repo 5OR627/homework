@@ -1,7 +1,7 @@
 """Задача 1"""
 
 
-def func(a = float, b = float) -> float:
+def func(a=float, b=float) -> float:
     try:
         return a / b
     except ZeroDivisionError:
